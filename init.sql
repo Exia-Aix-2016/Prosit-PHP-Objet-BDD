@@ -1,5 +1,3 @@
-CREATE DATABASE prosit;
-
 DROP TABLE IF EXISTS produits;
 
 CREATE TABLE produits
