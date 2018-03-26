@@ -7,7 +7,7 @@ services:
             - 8080:8080
         volumes:
             - ./www:/www
-            - ./site.conf:/etc/nginx/conf.d/site.conf
+            - ./site/site.conf:/etc/nginx/conf.d/site.conf
         links:
             - php
     php:
@@ -25,7 +25,7 @@ services:
             MYSQL_ROOT_PASSWORD: root
             MYSQL_DATABASE: prosit
         ports:
-            - "1306:3306"
+            - 1306:3306
         volumes: 
             - /var/lib/mysql
             - ./init.sql:/docker-entrypoint-initdb.d/init.sql
