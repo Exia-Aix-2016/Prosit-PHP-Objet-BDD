@@ -1,3 +1,8 @@
 <?php
+try{
+    $bdd = new PDO('mysql:host=db;dbname=prosit', 'root', 'root');
 
-phpinfo();
+}catch(PDOException $err){
+    echo $err;
+}
+//phpinfo();
